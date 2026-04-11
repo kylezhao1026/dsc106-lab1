@@ -114,3 +114,70 @@ button {
 .projects h2 {
   margin: 0;
 }
+
+.resume-page {
+  color: oklch(27% 0.055 58);
+  padding-block: 1.5em 4em;
+}
+
+.resume-page nav {
+  flex-wrap: wrap;
+  background: oklch(99% 0.006 245 / 0.86);
+}
+
+.resume-page nav a {
+  min-width: max-content;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.resume-page h1 {
+  margin-block: 0.4em 0.25em;
+  color: oklch(32% 0.08 58);
+}
+
+.resume-page a {
+  color: oklch(42% 0.13 58);
+  text-underline-offset: 0.18em;
+}
+
+.resume-page main {
+  display: grid;
+  gap: 1.5em;
+}
+
+.resume-page main > header {
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.resume-page main > header p {
+  margin-block: 0;
+  color: oklch(40% 0.045 58);
+}
+
+.resume-page section {
+  display: grid;
+  gap: 0.75em;
+}
+
+.resume-page section > header {
+  border-left: 0.35em solid var(--color-accent);
+  padding-left: 0.75em;
+}
+
+.resume-page section h2,
+.resume-page section h3,
+.resume-page section p,
+.resume-page section ul {
+  margin-block: 0;
+}
+
+.resume-page section article {
+  padding: 0.85em 1em;
+  border-left: 1px solid var(--color-border);
+  background: oklch(99% 0.006 245 / 0.72);
+}
+
+.resume-page li + li {
+  margin-top: 0.35em;
+}
