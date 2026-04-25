@@ -12,6 +12,12 @@
     "description": "Exploratory and statistical analysis of the sitcom Friends to identify patterns in viewership, dialogue distribution, and emotional range to inform a potential reboot strategy."
   },
   {
+    "title": "Expository Visualization: Grocery Store Food Processing",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Created a static expository visualization for DSC 106 using grocery store food data to show that more heavily processed foods tend to have a lower median price per calorie."
+  },
+  {
     "title": "Diabetes Risk Prediction Using Medical Records",
     "year": 2019,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
@@ -22,12 +28,6 @@
     "year": 2018,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Collaborated on a convolutional neural network project to classify CIFAR-10 images, focusing on model optimization and performance evaluation."
-  },
-  {
-    "title": "Lorem ipsum dolor sit.",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
   },
   {
     "title": "Lorem ipsum dolor sit.",
