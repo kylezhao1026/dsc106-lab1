@@ -124,10 +124,53 @@ button {
   display: grid;
   grid-row: span 3;
   grid-template-rows: subgrid;
+  gap: 0.5em;
+  padding: 1em;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75em;
+  background: color-mix(in oklch, canvas, canvastext 3%);
 }
 
 .projects h2 {
   margin: 0;
+}
+
+.project-year {
+  margin: 0;
+  color: color-mix(in oklch, canvastext, canvas 35%);
+  font-size: 0.9rem;
+}
+
+.github-section {
+  margin-top: 3rem;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: color-mix(in oklch, canvas, canvastext 3%);
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  margin: 0;
+  font-weight: 600;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  #profile-stats dl {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .resume-page {

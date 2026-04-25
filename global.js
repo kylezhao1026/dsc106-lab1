@@ -4,6 +4,58 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+export async function fetchJSON(url) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
+export function renderProjects(projects, containerElement, headingLevel = "h2") {
+  if (!containerElement) {
+    return;
+  }
+
+  containerElement.innerHTML = "";
+
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = "<p>No projects available yet.</p>";
+    return;
+  }
+
+  const headingTag = /^h[1-6]$/i.test(headingLevel) ? headingLevel : "h2";
+
+  for (const project of projects) {
+    const article = document.createElement("article");
+    const title = project.title ?? "Untitled Project";
+    const imagePath = project.image ?? "https://vis-society.github.io/labs/2/images/empty.svg";
+    const image =
+      imagePath.startsWith("http://") ||
+      imagePath.startsWith("https://") ||
+      imagePath.startsWith("/")
+        ? imagePath
+        : `${BASE_PATH}${imagePath}`;
+    const description = project.description ?? "Project description coming soon.";
+    const year = project.year ? `<p class="project-year">${project.year}</p>` : "";
+
+    article.innerHTML = `
+      <${headingTag}>${title}</${headingTag}>
+      <img src="${image}" alt="${title}">
+      ${year}
+      <p>${description}</p>
+    `;
+
+    containerElement.append(article);
+  }
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
 const BASE_PATH =
   location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? "/"

@@ -1,0 +1,74 @@
+[
+  {
+    "title": "League of Legends Esports: ADC Gold Lead Impact Analysis",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Statistical analysis of professional League of Legends match data to test whether ADC gold advantages at 15 minutes significantly impact win probability. Collaborative UCSD DSC 80 project analyzing 10,000+ competitive matches from Oracle's Elixir."
+  },
+  {
+    "title": "Utilizing Pandas to Analyze \"Friends\" for a Reboot",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Exploratory and statistical analysis of the sitcom Friends to identify patterns in viewership, dialogue distribution, and emotional range to inform a potential reboot strategy."
+  },
+  {
+    "title": "Diabetes Risk Prediction Using Medical Records",
+    "year": 2019,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built a logistic regression model to predict diabetes onset using medical record data, with a focus on data cleaning, visualization, and interpretability."
+  },
+  {
+    "title": "Image Classification with CNNs on CIFAR-10",
+    "year": 2018,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Collaborated on a convolutional neural network project to classify CIFAR-10 images, focusing on model optimization and performance evaluation."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2021",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2020",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit.",
+    "year": "2018",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  }
+]
