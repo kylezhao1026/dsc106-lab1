@@ -122,8 +122,7 @@ button {
 
 .projects article {
   display: grid;
-  grid-row: span 3;
-  grid-template-rows: subgrid;
+  grid-template-rows: auto auto 1fr;
   gap: 0.5em;
   padding: 1em;
   border: 1px solid var(--color-border);
@@ -131,14 +130,109 @@ button {
   background: color-mix(in oklch, canvas, canvastext 3%);
 }
 
+.projects article img {
+  width: 100%;
+}
+
 .projects h2 {
   margin: 0;
 }
 
+.project-details {
+  display: grid;
+  gap: 0.5em;
+  align-content: start;
+}
+
+.project-description,
 .project-year {
-  margin: 0;
+  margin-block: 0;
+}
+
+.project-year {
   color: color-mix(in oklch, canvastext, canvas 35%);
   font-size: 0.9rem;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.projects-controls {
+  display: grid;
+  gap: 1.25rem;
+  margin-block: 1.5rem 2rem;
+}
+
+.chart-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#projects-pie-plot {
+  flex: 0 0 min(20em, 45vw);
+  max-width: 20em;
+  overflow: visible;
+}
+
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.75rem 1rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  list-style: none;
+  background: color-mix(in oklch, canvas, canvastext 3%);
+}
+
+.legend-item {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.legend-item em {
+  color: color-mix(in oklch, canvastext, canvas 35%);
+  font-style: normal;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  border-radius: 0.2em;
+  background: var(--color);
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.searchBar {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.65em 0.8em;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: canvas;
+  color: canvastext;
 }
 
 .github-section {
@@ -170,6 +264,15 @@ button {
 @media (max-width: 640px) {
   #profile-stats dl {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-container {
+    display: grid;
+  }
+
+  #projects-pie-plot {
+    justify-self: center;
+    width: min(20em, 80vw);
   }
 }
 
