@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "analyze": "elocuent -i \"{*.html,*.js,*.css,contact/**/*.{html,js,css},projects/**/*.{html,js,css},resume/**/*.{html,js,css},meta/**/*.{html,js,css}}\" -o meta/loc.csv --spaces 2"
+  },
+  "devDependencies": {
+    "elocuent": "^0.0.4"
+  }
+}

@@ -66,6 +66,7 @@ const BASE_PATH =
 let pages = [
   { url: "", title: "Home" },
   { url: "projects/", title: "Projects" },
+  { url: "meta/", title: "Meta" },
   { url: "contact/", title: "Contact" },
   { url: "resume/", title: "Resume" },
   { url: "https://github.com/kylezhao1026", title: "GitHub" },

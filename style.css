@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   max-width: 100ch;
   margin-inline: auto;
-  padding-inline: 1em;
+  padding: 2.75rem 1em 1em;
 }
 
 :root {
@@ -341,4 +341,148 @@ button {
 
 .resume-page li + li {
   margin-top: 0.35em;
+}
+
+.meta-page {
+  max-width: 120ch;
+}
+
+.meta-intro {
+  color: color-mix(in oklch, canvastext, canvas 35%);
+  font-size: 1.1rem;
+}
+
+.meta-summary,
+.commit-section,
+.language-section {
+  margin-block: 2.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.stats-grid div {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: color-mix(in oklch, canvas, canvastext 3%);
+}
+
+.stats-grid dt,
+.info dt {
+  color: color-mix(in oklch, canvastext, canvas 35%);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stats-grid dd,
+.info dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-grid dd {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.commit-section > header {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.commit-section h2,
+.language-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+#selection-count {
+  margin: 0;
+  color: color-mix(in oklch, canvastext, canvas 35%);
+  font-size: 0.95rem;
+}
+
+#chart {
+  overflow-x: auto;
+}
+
+#chart svg {
+  display: block;
+  min-width: 44rem;
+  width: 100%;
+  height: auto;
+}
+
+#chart circle {
+  fill: color-mix(in oklch, var(--color-accent), canvastext 12%);
+  fill-opacity: 0.72;
+  stroke: canvas;
+  stroke-width: 1.5;
+  transition: fill-opacity 160ms ease, r 160ms ease;
+}
+
+#chart circle.hovered,
+#chart circle.selected {
+  fill-opacity: 1;
+}
+
+#chart circle.selected {
+  fill: oklch(62% 0.2 145);
+}
+
+.gridlines line {
+  stroke: color-mix(in oklch, canvastext, canvas 82%);
+}
+
+.gridlines path {
+  display: none;
+}
+
+.axis-label {
+  fill: color-mix(in oklch, canvastext, canvas 35%);
+  font-size: 0.85rem;
+}
+
+.brush .selection {
+  fill: var(--color-accent);
+  fill-opacity: 0.18;
+  stroke: var(--color-accent);
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.2rem 0.75rem;
+  max-width: 18rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: canvas;
+  box-shadow: 0 0.75rem 2rem color-mix(in oklch, canvastext, transparent 85%);
+  pointer-events: none;
+}
+
+.tooltip[hidden] {
+  display: none;
+}
+
+.tooltip a {
+  color: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .commit-section > header {
+    display: grid;
+  }
 }

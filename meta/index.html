@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../global.js"></script>
+    <script type="module" src="./main.js"></script>
+</head>
+<body class="meta-page">
+    <h1>Meta</h1>
+    <p class="meta-intro">A look at how this site is built, commit by commit and line by line.</p>
+
+    <section class="meta-summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Summary</h2>
+        <dl id="stats" class="stats-grid"></dl>
+    </section>
+
+    <section class="commit-section" aria-labelledby="commit-title">
+        <header>
+            <h2 id="commit-title">Commits by Time of Day</h2>
+            <p id="selection-count">No commits selected</p>
+        </header>
+        <div id="chart"></div>
+        <dl id="commit-tooltip" class="info tooltip" hidden>
+            <dt>Commit</dt><dd><a id="commit-link" href="#" target="_blank" rel="noopener"></a></dd>
+            <dt>Author</dt><dd id="commit-author"></dd>
+            <dt>Date</dt><dd id="commit-date"></dd>
+            <dt>Time</dt><dd id="commit-time"></dd>
+            <dt>Lines</dt><dd id="commit-lines"></dd>
+        </dl>
+    </section>
+
+    <section class="language-section" aria-labelledby="language-title">
+        <h2 id="language-title">Selected Lines by Language</h2>
+        <dl id="language-breakdown" class="stats-grid"></dl>
+    </section>
+</body>
+</html>
