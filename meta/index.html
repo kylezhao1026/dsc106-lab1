@@ -20,14 +20,24 @@
     <section class="commit-section" aria-labelledby="commit-title">
         <header>
             <h2 id="commit-title">Commits by Time of Day</h2>
-            <p id="selection-count">No commits selected</p>
         </header>
-        <div id="chart"></div>
+        <div class="time-filter">
+            <label for="commit-progress">Show commits until:</label>
+            <input id="commit-progress" type="range" min="0" max="100" value="100">
+            <time id="commit-time"></time>
+        </div>
+        <div id="scrolly-1">
+            <div id="scatter-story"></div>
+            <div id="scatter-plot">
+                <p id="selection-count">No commits selected</p>
+                <div id="chart"></div>
+            </div>
+        </div>
         <dl id="commit-tooltip" class="info tooltip" hidden>
             <dt>Commit</dt><dd><a id="commit-link" href="#" target="_blank" rel="noopener"></a></dd>
             <dt>Author</dt><dd id="commit-author"></dd>
             <dt>Date</dt><dd id="commit-date"></dd>
-            <dt>Time</dt><dd id="commit-time"></dd>
+            <dt>Time</dt><dd id="tooltip-commit-time"></dd>
             <dt>Lines</dt><dd id="commit-lines"></dd>
         </dl>
     </section>
@@ -35,6 +45,10 @@
     <section class="language-section" aria-labelledby="language-title">
         <h2 id="language-title">Selected Lines by Language</h2>
         <dl id="language-breakdown" class="stats-grid"></dl>
+    </section>
+    <section class="files-section" aria-labelledby="files-title">
+        <h2 id="files-title">File Sizes by Lines of Code</h2>
+        <dl id="files"></dl>
     </section>
 </body>
 </html>

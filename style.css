@@ -26,6 +26,7 @@ img {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 2em;
   --border-color: var(--color-border);
   border-bottom: 1px solid var(--border-color);
@@ -354,7 +355,8 @@ button {
 
 .meta-summary,
 .commit-section,
-.language-section {
+.language-section,
+.files-section {
   margin-block: 2.5rem;
 }
 
@@ -401,8 +403,73 @@ button {
 }
 
 .commit-section h2,
-.language-section h2 {
+.language-section h2,
+.files-section h2 {
   margin-bottom: 0.5rem;
+}
+
+.time-filter {
+  display: grid;
+  grid-template-columns: auto minmax(12rem, 1fr) auto;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-block: 1rem 1.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: color-mix(in oklch, canvas, canvastext 3%);
+}
+
+.time-filter label {
+  display: block;
+  grid-column: auto;
+  font-weight: 600;
+}
+
+.time-filter time {
+  color: color-mix(in oklch, canvastext, canvas 35%);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+#scrolly-1 > * {
+  flex: 1;
+  min-width: 0;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0.75rem;
+  height: 50vh;
+}
+
+.step {
+  min-height: 0;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  border-left: 0.25rem solid transparent;
+  color: color-mix(in oklch, canvastext, canvas 35%);
+}
+
+.step.active {
+  border-left-color: var(--color-accent);
+  color: canvastext;
+  background: color-mix(in oklch, var(--color-accent), canvas 92%);
+}
+
+.step p {
+  margin-block: 0 0.75rem;
 }
 
 #selection-count {
@@ -413,6 +480,8 @@ button {
 
 #chart {
   overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
 }
 
 #chart svg {
@@ -427,7 +496,11 @@ button {
   fill-opacity: 0.72;
   stroke: canvas;
   stroke-width: 1.5;
-  transition: fill-opacity 160ms ease, r 160ms ease;
+  transition: fill-opacity 160ms ease, r calc(var(--r, 4) * 12ms) ease;
+
+  @starting-style {
+    r: 0;
+  }
 }
 
 #chart circle.hovered,
@@ -481,8 +554,84 @@ button {
   color: var(--color-accent);
 }
 
+#files {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 4fr);
+  gap: 0.75rem 1rem;
+  margin: 0;
+}
+
+#files > div {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  padding-block: 0.4rem;
+  border-bottom: 1px solid color-mix(in oklch, var(--color-border), transparent 45%);
+}
+
+#files dt {
+  grid-column: 1;
+  min-width: 0;
+}
+
+#files dt code {
+  overflow-wrap: anywhere;
+}
+
+#files dt small {
+  display: block;
+  margin-top: 0.15rem;
+  color: color-mix(in oklch, canvastext, canvas 42%);
+  font-size: 0.8rem;
+}
+
+#files dd {
+  display: flex;
+  grid-column: 2;
+  flex-wrap: wrap;
+  align-content: start;
+  align-items: start;
+  gap: 0.15em;
+  margin: 0;
+  padding-top: 0.35em;
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color, steelblue);
+}
+
 @media (max-width: 640px) {
   .commit-section > header {
     display: grid;
+  }
+
+  .time-filter,
+  #scrolly-1,
+  #files,
+  #files > div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .time-filter time {
+    text-align: left;
+  }
+
+  #scatter-plot {
+    position: static;
+    height: auto;
+  }
+
+  .step {
+    margin-bottom: 0.75rem;
+  }
+
+  #files dt,
+  #files dd {
+    grid-column: 1;
   }
 }
